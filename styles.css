@@ -1,0 +1,29 @@
+#start,
+#clear,
+#random {
+    padding: .75em;
+    border-radius: 5px;
+    border: none;    
+    background: linear-gradient(
+        to bottom right,
+        #5161a7, #b1c4e9);
+}
+.planeContainer{
+    width: fit-content;
+    height: auto;
+    margin-left: 0px;
+    background-color: #CCC;
+  }
+  .row{
+    display: flex;
+  }
+  .box{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #f7eaea;
+    border-radius: 3px;
+    text-align: center;
+    border:1px solid rgb(196, 189, 189);
+    color: transparent;
+  }
