@@ -17,11 +17,14 @@ for (let i = 0; i < rows; i++) {
 }
 
 //Intialization
-const randomBoolean = () => Math.random() >= 0.5;
+
+const randomBoolean = () => Math.random() >= 0.8;
+
 for (let i = 0; i < rows; i++) {
   for (let j = 0; j < cols; j++) {
     arr1[i][j] = Number(randomBoolean()); // true
     document.getElementById(i + "-" + j).innerHTML = arr1[i][j];
+    document.getElementById(i + "-" + j).setAttribute('data-is-live', arr1[i][j]);
   }
 }
 

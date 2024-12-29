@@ -8,7 +8,7 @@ function randomCreatGeneration() {
     }
   }
 }
-
+window.screenX
 function reset() {
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
@@ -18,17 +18,38 @@ function reset() {
 }
 
 function start() {
-    
-  let arr2 = [];
-  arr2=neighborsCount(arr1);
+  //let arr2 = [];
+  arr1 = neighborsCount(arr1);
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-        if (arr2[i][j] == 1) {
-            document.getElementById(i + "-" + j).style.backgroundColor = "red";
-          }
-          else{
-            document.getElementById(i + "-" + j).style.backgroundColor = " #f7eaea";
-          }
+      if (arr1[i][j] == 1) {
+        document.getElementById(i + "-" + j).style.backgroundColor = "red";
+      } else {
+        document.getElementById(i + "-" + j).style.backgroundColor = " #f7eaea";
+      }
     }
   }
+}
+
+let isRun = false;
+let autoRun;
+function autoStart() {
+  if (isRun) {
+    isRun = false;
+    clearInterval(autoRun);
+    return;
+  }
+
+  isRun = true;
+
+  autoRun = setInterval(start, 500);
+
+}
+
+function factorial(n)
+{
+  if(n < 2)
+    return 1;
+  else
+    return n * factorial(n - 1);
 }
