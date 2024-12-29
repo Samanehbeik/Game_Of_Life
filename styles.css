@@ -1,6 +1,6 @@
 #start,
-#clear,
-#random {
+#random,
+#reset {
     padding: .75em;
     border-radius: 5px;
     border: none;    
@@ -27,3 +27,5 @@
     border:1px solid rgb(196, 189, 189);
     color: transparent;
   }
+
+  
