@@ -42,7 +42,7 @@ function neighborsCount(arr) {
       i + 1 < rows && j - 1 >= 0 && arr[i + 1][j - 1] == 1 ? count++ : "";
       i + 1 < rows && arr[i + 1][j] == 1 ? count++ : "";
       i + 1 < rows && j + 1 < cols && arr[i + 1][j + 1] == 1 ? count++ : "";
-      count == 3 || count == 2 ? (arr3[i][j] = 1) : (arr3[i][j] = 0);
+      count == 3 || (count == 2 && arr[i][j] == 1) ? (arr3[i][j] = 1) : (arr3[i][j] = 0);
     }
   }
   return arr3
